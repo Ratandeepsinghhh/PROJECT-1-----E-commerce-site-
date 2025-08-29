@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Modern Shopping Destination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>ShopEase</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">Cart <span id="cart-count" class="cart-count">0</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item" id="auth-section">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item" id="signup-section">
+                        <a href="signup.html" class="nav-link">Signup</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to ShopEase</h1>
+                    <p class="hero-subtitle">Discover amazing products at unbeatable prices</p>
+                    <a href="products.html" class="hero-btn">Shop Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg" alt="Shopping Experience">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid" id="featured-products-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+                <div class="text-center">
+                    <a href="products.html" class="btn btn-secondary">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Free Shipping</h3>
+                        <p>Free delivery on orders over $50</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure Payment</h3>
+                        <p>Your payment information is safe</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">↩️</div>
+                        <h3>Easy Returns</h3>
+                        <p>30-day return policy</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h3>24/7 Support</h3>
+                        <p>Customer support available anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEase</h3>
+                    <p>Your modern shopping destination for quality products at great prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">ShopEase</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link active">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">Cart <span id="cart-count" class="cart-count">0</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item" id="auth-section">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item" id="signup-section">
+                        <a href="signup.html" class="nav-link">Signup</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            
+            <!-- Search and Filter Section -->
+            <div class="search-filter-section">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+                    <button id="search-btn" class="search-btn">🔍</button>
+                </div>
+                <div class="filter-section">
+                    <select id="category-filter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                        <option value="home">Home & Garden</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                    <select id="price-filter" class="filter-select">
+                        <option value="">All Prices</option>
+                        <option value="0-25">Under $25</option>
+                        <option value="25-50">$25 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100+">Over $100</option>
+                    </select>
+                    <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <h3>No products found</h3>
+                <p>Try adjusting your search or filter criteria.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEase</h3>
+                    <p>Your modern shopping destination for quality products at great prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

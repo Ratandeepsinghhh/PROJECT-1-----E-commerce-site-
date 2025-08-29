@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">ShopEase</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link active">Cart <span id="cart-count" class="cart-count">0</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item" id="auth-section">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item" id="signup-section">
+                        <a href="signup.html" class="nav-link">Signup</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart</h1>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be loaded by JavaScript -->
+                </div>
+
+                <div class="cart-empty" id="cart-empty" style="display: none;">
+                    <h3>Your cart is empty</h3>
+                    <p>Add some products to get started!</p>
+                    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+                </div>
+
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        <button id="checkout-btn" class="btn btn-primary btn-full">Proceed to Checkout</button>
+                        <a href="products.html" class="btn btn-secondary btn-full">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEase</h3>
+                    <p>Your modern shopping destination for quality products at great prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
