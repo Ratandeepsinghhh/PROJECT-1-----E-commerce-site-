@@ -1082,3 +1082,18 @@ a:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
 }
+.loading {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}

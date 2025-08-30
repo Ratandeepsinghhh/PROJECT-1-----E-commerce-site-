@@ -1,9 +1,10 @@
 // Global variables and data
+// ...existing code...
 let products = [
     {
         id: 1,
         name: "Wireless Bluetooth Headphones",
-        price: 79.99,
+        price: 6639, 
         image: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
         description: "High-quality wireless headphones with noise cancellation",
         category: "electronics",
@@ -12,7 +13,7 @@ let products = [
     {
         id: 2,
         name: "Smart Fitness Watch",
-        price: 199.99,
+        price: 16599, 
         image: "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg",
         description: "Track your fitness goals with this advanced smartwatch",
         category: "electronics",
@@ -21,7 +22,7 @@ let products = [
     {
         id: 3,
         name: "Organic Cotton T-Shirt",
-        price: 24.99,
+        price: 2074, 
         image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
         description: "Comfortable and sustainable organic cotton t-shirt",
         category: "clothing",
@@ -30,7 +31,7 @@ let products = [
     {
         id: 4,
         name: "Modern Coffee Maker",
-        price: 149.99,
+        price: 12449, 
         image: "https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg",
         description: "Brew the perfect cup with this sleek coffee maker",
         category: "home",
@@ -39,7 +40,7 @@ let products = [
     {
         id: 5,
         name: "Classic Novel Collection",
-        price: 34.99,
+        price: 2904, 
         image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
         description: "A collection of timeless literary classics",
         category: "books",
@@ -48,7 +49,7 @@ let products = [
     {
         id: 6,
         name: "Yoga Mat Premium",
-        price: 49.99,
+        price: 4149, 
         image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg",
         description: "Non-slip premium yoga mat for your practice",
         category: "sports",
@@ -57,7 +58,7 @@ let products = [
     {
         id: 7,
         name: "Wireless Phone Charger",
-        price: 29.99,
+        price: 2489, 
         image: "https://images.pexels.com/photos/4526413/pexels-photo-4526413.jpeg",
         description: "Fast wireless charging pad for all compatible devices",
         category: "electronics",
@@ -66,7 +67,7 @@ let products = [
     {
         id: 8,
         name: "Denim Jacket",
-        price: 89.99,
+        price: 7469, 
         image: "https://images.pexels.com/photos/1040173/pexels-photo-1040173.jpeg",
         description: "Classic denim jacket for timeless style",
         category: "clothing",
@@ -75,7 +76,7 @@ let products = [
     {
         id: 9,
         name: "Indoor Plant Set",
-        price: 59.99,
+        price: 4979, 
         image: "https://images.pexels.com/photos/1055379/pexels-photo-1055379.jpeg",
         description: "Beautiful set of indoor plants to brighten your space",
         category: "home",
@@ -84,7 +85,7 @@ let products = [
     {
         id: 10,
         name: "Running Shoes",
-        price: 119.99,
+        price: 9959, 
         image: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
         description: "Lightweight running shoes for optimal performance",
         category: "sports",
@@ -93,7 +94,7 @@ let products = [
     {
         id: 11,
         name: "Bluetooth Speaker",
-        price: 69.99,
+        price: 5809,
         image: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg",
         description: "Portable speaker with crystal clear sound quality",
         category: "electronics",
@@ -102,13 +103,14 @@ let products = [
     {
         id: 12,
         name: "Leather Wallet",
-        price: 39.99,
+        price: 3319, 
         image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg",
         description: "Premium leather wallet with multiple card slots",
         category: "clothing",
         featured: false
     }
 ];
+// ...existing code...
 
 let cart = JSON.parse(localStorage.getItem('shopease-cart')) || [];
 let currentUser = JSON.parse(localStorage.getItem('shopease-user')) || null;
@@ -290,7 +292,7 @@ function displayProducts(productsToShow, container) {
             <img src="${product.image}" alt="${product.name}" class="product-image">
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>
-                <p class="product-price">$${product.price.toFixed(2)}</p>
+                <p class="product-price">₹${product.price.toFixed(2)}</p>
                 <p class="product-description">${product.description}</p>
                 <button onclick="addToCart(${product.id})" class="add-to-cart-btn">
                     Add to Cart
@@ -449,7 +451,7 @@ function loadCartItems() {
             <img src="${item.image}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
-                <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                <p class="cart-item-price">₹${item.price.toFixed(2)}</p>
             </div>
             <div class="quantity-control">
                 <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
@@ -457,7 +459,7 @@ function loadCartItems() {
                        onchange="updateQuantity(${item.id}, parseInt(this.value))" min="1">
                 <button class="quantity-btn" onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
             </div>
-            <div class="cart-item-total">$${(item.price * item.quantity).toFixed(2)}</div>
+            <div class="cart-item-total">₹${(item.price * item.quantity).toFixed(2)}</div>
             <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
         </div>
     `).join('');
@@ -476,10 +478,10 @@ function updateCartSummary() {
     const taxElement = document.getElementById('tax');
     const totalElement = document.getElementById('total');
     
-    if (subtotalElement) subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-    if (shippingElement) shippingElement.textContent = `$${shipping.toFixed(2)}`;
-    if (taxElement) taxElement.textContent = `$${tax.toFixed(2)}`;
-    if (totalElement) totalElement.textContent = `$${total.toFixed(2)}`;
+    if (subtotalElement) subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
+    if (shippingElement) shippingElement.textContent = `₹${shipping.toFixed(2)}`;
+    if (taxElement) taxElement.textContent = `₹${tax.toFixed(2)}`;
+    if (totalElement) totalElement.textContent = `₹${total.toFixed(2)}`;
 }
 
 // Checkout functions
@@ -499,7 +501,7 @@ function loadCheckoutItems() {
                 <br>
                 <small>Quantity: ${item.quantity}</small>
             </div>
-            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+            <span>₹${(item.price * item.quantity).toFixed(2)}</span>
         </div>
     `).join('');
     
@@ -517,10 +519,10 @@ function updateCheckoutSummary() {
     const checkoutTax = document.getElementById('checkout-tax');
     const checkoutTotal = document.getElementById('checkout-total');
     
-    if (checkoutSubtotal) checkoutSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-    if (checkoutShipping) checkoutShipping.textContent = `$${shipping.toFixed(2)}`;
-    if (checkoutTax) checkoutTax.textContent = `$${tax.toFixed(2)}`;
-    if (checkoutTotal) checkoutTotal.textContent = `$${total.toFixed(2)}`;
+    if (checkoutSubtotal) checkoutSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
+    if (checkoutShipping) checkoutShipping.textContent = `₹${shipping.toFixed(2)}`;
+    if (checkoutTax) checkoutTax.textContent = `₹${tax.toFixed(2)}`;
+    if (checkoutTotal) checkoutTotal.textContent = `₹${total.toFixed(2)}`;
 }
 
 // Authentication form handlers
